@@ -30,6 +30,6 @@ export default defineComponent({
   backdrop-filter: saturate(150%) contrast(50%) blur(10px);
 }
 .container {
-  height: calc(100% - 80px);
+  height: 900px;
 }
 </style>

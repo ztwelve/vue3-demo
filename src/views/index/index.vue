@@ -17,7 +17,7 @@
 <script lang="ts">
 import IndexTop from "@/components/IndexTop.vue";
 import Main from "@/components/Main.vue";
-import { defineComponent } from "@vue/runtime-core";
+import { defineComponent } from "vue";
 // import Chart from "@/views/index/components/chart";
 export default defineComponent({
   components: { IndexTop, Main },
