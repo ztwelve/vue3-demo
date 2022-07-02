@@ -1,13 +1,14 @@
 .container {
     width: 100%;
     height: 100%;
-    background: linear-gradient(rgb(0, 1, 3), rgb(19, 148, 190), rgb(19, 148, 190));
-    border: 1px solid red;
+    // background: linear-gradient(rgb(0, 1, 3), rgb(19, 148, 190), rgb(19, 148, 190));
     // background: linear-gradient(rgb(22, 17, 58), rgb(67, 52, 76), rgb(22, 17, 58));
 }
 .page-index {
     display: flex;
     flex-direction: column;
+    position: relative;
+    height: 100%;
     .page-top {
         flex: 1;
     }
@@ -19,16 +20,13 @@
         }
         .container-right {
             flex: 1;
-            border: 1px solid red;
         }
         .container-center {
             flex: 4;
-            border: 1px solid red;
         }
     }
     .page-bottom {
         flex: 2;
-        border: 1px solid red;
     }
 }
 .index-top {

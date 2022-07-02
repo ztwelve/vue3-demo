@@ -1,8 +1,7 @@
 <template>
   <div class="box">
     <div class="title">
-      <expand-outlined />
-      <img :src="src" />
+      <expand-outlined style="color: rgb(24, 254, 254); font-size: 24px" />
       <span class="text">{{ title }}</span>
     </div>
     <span class="line">
@@ -15,14 +14,18 @@
 </template>
 <script lang="ts">
 import { defineComponent } from "vue";
+import { ExpandOutlined } from "@ant-design/icons-vue";
 export default defineComponent({
-  props: ["text", "src"],
+  components: { ExpandOutlined },
+  props: {
+    title: {
+      default: "",
+    },
+  },
   setup(props) {
-    let title = props.text,
-      src = props.src;
+    let title = props.title;
     return {
       title,
-      src,
     };
   },
 });
@@ -30,7 +33,7 @@ export default defineComponent({
 <style lang="scss" scoped>
 .box {
   width: 100%;
-  backdrop-filter: saturate(150%) contrast(50%) blur(10px);
+  backdrop-filter: saturate(150%) contrast(100%) blur(5px);
   box-shadow: 0 0 20px #333;
 
   .title {
@@ -38,6 +41,7 @@ export default defineComponent({
     align-items: center;
     background-color: rgb(2, 15, 24);
     padding-left: 10px;
+    font-family: Microsoft YaHei "微软雅黑";
     img {
       height: 25px;
       width: 25px;
@@ -56,12 +60,12 @@ export default defineComponent({
     height: 3px;
     width: 100%;
     .left {
-      flex: 1;
+      flex: 2;
       background-color: #fff;
     }
     .center {
-      flex: 7;
-      background-color: rgb(112, 119, 123);
+      flex: 9;
+      background-color: rgb(128, 134, 137);
     }
     .right {
       margin-left: 5px;
