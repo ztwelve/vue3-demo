@@ -17,7 +17,9 @@ export default defineComponent({
           resizeEnable:true,
           zoom: 15,
           center: [120.232165, 30.279615],
-          mapStyle: "amap://styles/fde23bd3067a05cab0bdebb14b868576",
+          mapStyle: 'amap://styles/fde23bd3067a05cab0bdebb14b868576',
+          viewMode:'3D',
+          buildingAnimation:true
         });
         AMap.plugin("AMap.Geolocation", function () {
           var Geolocation = new AMap.Geolocation();

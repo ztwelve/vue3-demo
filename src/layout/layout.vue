@@ -18,7 +18,7 @@
 import { defineComponent, reactive, ref } from "vue";
 import IndexTop from "@/components/IndexTop.vue";
 export default defineComponent({
-  name: "layout",
+  name: "Layout",
   components: { IndexTop },
   setup() {
     let current = ref<string[]>(["index"]);
@@ -35,8 +35,11 @@ export default defineComponent({
   height: 80px;
   width: 100%;
   backdrop-filter: saturate(150%) contrast(50%) blur(10px);
+  position: fixed;
+  z-index: 1;
 }
 .container {
   height: 900px;
+  overflow: auto;
 }
 </style>
